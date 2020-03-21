@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Midam</title>
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+    <script type="text/javascript">
+        function order() {
+            let name = $('#order_name').val();
+            let count = $('#order_count').val();
+            let address = $('#order_address').val();
+            let phone = $('#order_phone').val();
+
+            if (name == "") {
+                alert('이름을 입력해주세요');
+                $('#order_name').focus();
+
+            }
+
+            else if (count == "")
+            {
+                alert('수량을 입력해주세요');
+                $('#order_count').focus();
+
+            }
+            else if (address == "") 
+            {
+                alert('주소를 입력해주세요');
+                $('#order_address').focus();
+
+            } 
+            else if (phone == "") 
+            {
+                alert('전화번호를 입력해주세요');
+                $('#order_phone').focus();
+
+            }
+        }
+
+
+    </script>
+
+    <style>
+        body {
+            width: 600px;
+            margin: 50px auto 0 auto;
+        }
+
+        .project {
+            text-align: center;
+            font-family: 'Nanum Myeongjo', serif;
+            font-size: 20px;
+        }
+
+        .picture {
+            color: white;
+            text-align: center;
+            background-image: url('https://tumblbug-pci.imgix.net/a527863dcf042abafe6ad6630769514211f8b1a6/d4053394081e364e71070fa7456ff52a7f0e816d/5dbb8845d8d9fbf1f3af85579f204393eee4243a/4849dc4d-3ec0-4608-9475-3b282ba1839e.png?ixlib=rb-1.1.0&w=1240&h=930&auto=format%2Ccompress&lossless=true&fit=crop&s=87f4ae0b1246453ff975246e41f590ce');
+            background-size: cover;
+            background-position: center;
+            width: 600px;
+            height: 400px;
+            border-radius: 10px;
+        }
+
+        .detail {
+            font-family: 'Nanum Myeongjo', serif;
+            font-size: 12px;
+            line-height: 150%;
+            color: rgba(92, 66, 32, 0.568);
+        }
+
+        .product {
+            font-family: 'Nanum Myeongjo', serif;
+        }
+
+
+        .form_order {
+            font-size: 15px;
+        }
+
+        .form-control {
+            width: 80%;
+            float: right;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="project">
+        <p>Midam Project</p>
+    </div>
+
+    <div class="picture">
+    </div>
+
+    <div class="title">
+        <h1> 전통 영세 양조장과 함께 하다, 지게미 비누 </h1>
+        <h3> “지게미 업사이클링 사업을 통해 영세 양조장의 경제적 부담을 줄이자!” </h3>
+    </div>
+
+    <div class="detail">
+        <hr>
+        <p> 안녕하세요 미담입니다. 미담은 전통 영세 양조장의 경제적 상생을 위해 활동하는 대학생 프로젝트입니다. <br>
+            저희는 막걸리를 빚고 남은 곡물인 지게미를 업사이클링한 비누를 만들어, 수익의 일부를 영세 양조장에 전달합니다.
+        </p>
+    </div>
+
+    <div class="product">
+        <hr>
+        <p> <br>
+            <strong>지게미 달비누 &nbsp; 7,900원 </strong>
+            <br><br>
+            <span style="font-size:12px">
+                지게미 달비누에는 풍부한 영양성분이 들어있는 지게미 분말과 막걸리 추출물이 첨가되어 있어, 높은 보습력을 자랑하며 피부를 탄력있고 매끄럽게 가꿔줍니다.
+                높은 항산화 효능과 화이트닝 효과로 피부를 환하게 가꿔주고 피부 면역력 강화를 통해 피부 노화를 예방합니다.
+            </span>
+        </p>
+        <hr>
+    </div>
+
+    <div class="form_order">
+        <br>
+        <div class="form-group">
+            <label>주문자 성함</label>
+            <input type="text" class="form-control" id="order_name">
+        </div>
+        <br>
+        <div class="form-group">
+            <label>주문 수량</label>
+            <select class="form-control" id="order_count">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+        <br>
+        <div class="form-group">
+            <label>주소</label>
+            <input type="text" class="form-control" id="order_address">
+        </div>
+        <br>
+        <div class="form-group">
+            <label>연락처</label>
+            <input type="text" class="form-control" id="order_phone">
+        </div>
+        <br>
+        <hr><br>
+        <div class="order">
+            <button onclick="order()" type="button" class="btn btn-primary">
+                주문하기 </button>
+        </div>
+    </div>
+
+    <br>
+</body>
+
+</html>
